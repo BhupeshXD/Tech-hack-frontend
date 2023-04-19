@@ -18,43 +18,45 @@ const Maps = () => {
 
   return (
     <div>
-      <h1 className="font-2xl text-richblack-100 ">Google Maps Intergration</h1>
-      <div>
-        <form onSubmit={handleSubmit} className="flex bg-slate-200 ">
-          <label>
-            From
+      <div className="flex justify-center  mx-auto">
+        <form onSubmit={handleSubmit} className="flex flex-wrap justify-around  items-center gap-10 bg-slate-200 p-3 rounded-md text-black ">
+          <div >
+          <label >
+          <p>From</p>
+            
             <input
-              className=""
+              
               type="text"
               value={input1}
               onChange={handleInput1Change}
+              className="rounded-md"
             />
           </label>
-          <br />
-          <br />
+          
+          </div>
+          <div>
           <label>
-            To
+          <p>To</p>
+          
             <input
-              className="color-black"
+
+              className="rounded-md"
               type="text"
               value={input2}
               onChange={handleInput2Change}
             />
           </label>
-          <br />
-          <button type="submit">Submit</button>
+          
+          </div>
+          <div>
+          <button className='bg-yellow-50 rounded-[8px] font-medium text-richblack-900 px-[12px] py-[8px] mt-5'>
+        Submit
+      </button>
+          </div>
+          
         </form>
       </div>
 
-      <div>
-        <div style={{ display: "flex" }}>
-          <button type="Parking">Parking</button>
-          <button type="Traffic">Traffic</button>
-          <button type="Road Quality">Road Quality</button>
-        </div>
-
-        <div> Google API Part </div>
-      </div>
     </div>
   );
 };

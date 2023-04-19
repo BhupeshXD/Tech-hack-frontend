@@ -1,13 +1,13 @@
 import React from "react";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo.svg";
+import Logo from "../assets/mapmeout.png";
 
 function Navbar({ isLoggedIn, setIsLoggedIn }) {
   return (
     <div className='flex justify-between items-center text-white w-11/12 max-w-[1160px] mx-auto py-4'>
       <Link to='/'>
-        <img src={null} alt='Logo' />
+        <img src={Logo} alt='Logo' width={100} height={100}/>
       </Link>
       <nav>
         <ul className='flex  gap-x-6'>
@@ -15,11 +15,12 @@ function Navbar({ isLoggedIn, setIsLoggedIn }) {
             <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to='/'>Parking Portal</Link>
+            <Link to='/volunteer'>Volunteer</Link>
           </li>
           <li>
-            <Link to='/'>Become a Volunteer</Link>
+            <Link to='/'>Parking</Link>
           </li>
+          
         </ul>
       </nav>
       <div className='flex gap-x-4 items-center '>
